@@ -83,8 +83,17 @@ function getAudioCtx() {
     if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
+    if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+    }
     return audioCtx;
 }
+
+// Initialize AudioContext on first user gesture
+document.addEventListener('click', function initAudio() {
+    getAudioCtx();
+    document.removeEventListener('click', initAudio);
+}, { once: true });
 
 function playSound(type) {
     if (!settings.sound) return;

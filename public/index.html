@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiến Lên Miền Nam</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
     <meta name="description" content="Game bài Tiến Lên Miền Nam online - Chơi offline với AI hoặc online với bạn bè">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- ==================== MENU CHÍNH ==================== -->
     <div id="menu-screen" class="screen active">
@@ -173,7 +178,8 @@
                     </button>
                     <div class="or-divider"><span>hoặc</span></div>
                     <div class="join-area">
-                        <input type="text" id="room-id-input" placeholder="Nhập mã phòng..." maxlength="5" style="text-transform:uppercase">
+                        <input type="text" id="room-id-input" placeholder="Nhập mã phòng..." maxlength="5"
+                            style="text-transform:uppercase">
                         <button class="online-btn join-btn" onclick="joinRoom()">
                             <span class="btn-icon">🚪</span>
                             Vào Phòng
@@ -291,4 +297,5 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="game.js"></script>
 </body>
+
 </html>
