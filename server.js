@@ -215,13 +215,11 @@ io.on('connection', (socket) => {
             return;
         }
 
-        const hands = dealCards();
-        // If less than 4 players, just use however many we have
         const playerCount = room.players.length;
 
-        // Re-deal for actual player count
+        // Always deal 13 cards per player (standard Tiến Lên rules)
         const deck = shuffleDeck(createDeck());
-        const cardsPerPlayer = Math.floor(52 / playerCount);
+        const cardsPerPlayer = 13;
         const playerHands = [];
         for (let i = 0; i < playerCount; i++) {
             playerHands.push(sortCards(deck.slice(i * cardsPerPlayer, (i + 1) * cardsPerPlayer)));
